@@ -3,31 +3,42 @@
     display: flex;
     width: 1000px;
     height: 1000px;
+    align-items: flex-end;
 }
 
 .item{
     width: 100px;
-    height: 200px;
+    height: 100px;
     text-align: center;
     font-size: 32px;
 }
 
 #item1{
     background-color: aqua;
-    order: 2;
-}
-#item2{
-    background-color: #13cb13;
-    order: 1;
-}
-#item3{
-    background-color: #0033ff;
-    order: 4;
-}
-#item4{
-    background-color: #ffeb34;
+    flex-grow: 1;
     order: 5;
 }
+
+#item2{
+    background-color: #13cb13;
+    flex-grow: 1;
+    align-self: flex-start;
+    order: 3;
+}
+
+#item3{
+    background-color: #0033ff;
+    flex-grow: 2;
+    order: 1;
+}
+
+#item4{
+    background-color: #ffeb34;
+    flex-grow: 1;
+    orphans: 4;
+}
+
 #item5{
     background-color: #e600ff;
+    flex-grow: 1;
 }
